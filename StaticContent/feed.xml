@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+	<channel>
+		<title>News about AndLicensing.com</title>
+		<link>http://www.andlicensing.com/</link>
+		<description>News and announcements about AndLicensing.com</description>
+		<language>en</language>
+		<generator>AndLicensing.com Website</generator>
+		<ttl>240</ttl>
+		<item>
+			<title>We're coding</title>
+			<link>http://www.andlicensing.com/</link>
+			<description>We're writing code at the moment... stick with us.</description>
+			<author>Al Sutton</author>
+			<guid>http://www.andlicesing.com/</guid>
+			<pubDate>Fri, 31 Oct 2008 16:03:57 +0000</pubDate>
+		</item>		
+	</channel>
+</rss>
