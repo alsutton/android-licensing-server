@@ -11,7 +11,7 @@
 		title="AndAppStore.com new releases RSS Feed" />
 </head>
 <body>
-<h3>About</h3>
+<p>We're coding at the moment, but if you're interested in whats going to happen sign up to one of the feeds</p>
 	<div id="feedLinkContainer">
 		<div id="feedLink">
 			<a href="http://twitter.com/AndLicensing">
