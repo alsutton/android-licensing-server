@@ -1,0 +1,134 @@
+body			{ margin: 0px; text-align: center; font-family: Verdana, Arial, Courier }
+a:hover 		{ color:red; text-decoration:none;} 
+#feedLink		{ text-align: right; }
+img 			{ border: 0 }
+#actionMessage	{ margin-top: 5px; margin-left: auto; margin-right: auto; text-align:center; color: white; background: #00AA00; font-weight: bold }
+#errorMessage	{ margin-top: 5px; margin-left: auto; margin-right: auto; text-align:center; color: white; background: #AA0000; font-weight: bold }
+h3				{ align: center; text-align: center }
+
+
+#header { font-size: 14pt; font-weight: bold }
+#loginmessage { align: center; margin-bottom: 5px; border-bottom: 1px dashed #336699; font-size: 10pt }
+
+#advert { width: auto; background: white; border: 1px solid black; }
+
+#pagefooter	{ clear: both }
+#pagefootercontent { text-align: center; color: #336699; font-size: 10pt; padding-top: 5px; border-top: 1px dashed #336699 }
+
+div.tsandcs			{ font-size: 8pt; text-align: left }
+div.search			{ font-size: 12pt }
+
+div.releaseIcon	{ float:left; width: 35px }
+div.appPublisher, div.appLastUpdate {font-size: 8pt}
+div.releaseDownload	{ float:left; }
+div.releaseData	{ clear:right  }
+div.releaseContainer { padding-bottom: 5px }
+div.unavailableVersion { text-decoration: line-through; font-size: 8pt }
+
+div.appPageName { font-size: 12pt; font-weight: bold }
+div.viewAllLink { font-size: 8pt; padding-bottom: 10px; }
+
+#feedLink { text-align: right; }
+#feedLink a { border: 0; text-decoration: none }
+
+.roundedcornr_box_648525 {
+   background: #ddeeff; font-size: 8pt;
+}
+.roundedcornr_top_648525 div {
+   background: url(/images/roundedcornr_648525_tl.png) no-repeat top left;
+}
+.roundedcornr_top_648525 {
+   background: url(/images/roundedcornr_648525_tr.png) no-repeat top right;
+}
+.roundedcornr_bottom_648525 div {
+   background: url(/images/roundedcornr_648525_bl.png) no-repeat bottom left;
+}
+.roundedcornr_bottom_648525 {
+   background: url(/images/roundedcornr_648525_br.png) no-repeat bottom right;
+}
+
+.roundedcornr_top_648525 div, .roundedcornr_top_648525, 
+.roundedcornr_bottom_648525 div, .roundedcornr_bottom_648525 {
+   width: 100%;
+   height: 10px;
+   font-size: 1px;
+}
+.roundedcornr_content_648525 { margin: 0 10px; }
+
+.roundedcornr_box_230349 {
+   background: #222222; color: white;
+}
+.roundedcornr_top_230349 div {
+   background: url(/images/roundedcornr_230349_tl.png) no-repeat top left;
+}
+.roundedcornr_top_230349 {
+   background: url(/images/roundedcornr_230349_tr.png) no-repeat top right;
+}
+.roundedcornr_bottom_230349 div {
+   background: url(/images/roundedcornr_230349_bl.png) no-repeat bottom left;
+}
+.roundedcornr_bottom_230349 {
+   background: url(/images/roundedcornr_230349_br.png) no-repeat bottom right;
+}
+
+.roundedcornr_top_230349 div, .roundedcornr_top_230349, 
+.roundedcornr_bottom_230349 div, .roundedcornr_bottom_230349 {
+   width: 100%;
+   height: 5px;
+   font-size: 1px;
+}
+.roundedcornr_content_230349 { margin: 0 5px; }
+
+.roundedcornr_box_955406 {
+   background: #eeeeff;  margin-bottom: 5px;
+}
+.roundedcornr_top_955406 div {
+   background: url(/images/roundedcornr_955406_tl.png) no-repeat top left;
+}
+.roundedcornr_top_955406 {
+   background: url(/images/roundedcornr_955406_tr.png) no-repeat top right;
+}
+.roundedcornr_bottom_955406 div {
+   background: url(/images/roundedcornr_955406_bl.png) no-repeat bottom left;
+}
+.roundedcornr_bottom_955406 {
+   background: url(/images/roundedcornr_955406_br.png) no-repeat bottom right;
+}
+
+.roundedcornr_top_955406 div, .roundedcornr_top_955406, 
+.roundedcornr_bottom_955406 div, .roundedcornr_bottom_955406 {
+   width: 100%;
+   height: 10px;
+   font-size: 1px;
+}
+.roundedcornr_content_955406 { margin: 0 10px; }
+
+
+span.pagelinks { background: white; color: #999999; font-weight: bold }
+span.pagelinks a { background: white; color: #444444}
+
+h3 a {color: #888888; text-decoration: none}
+
+div.unavailableVersion { text-decoration: line-through }
+
+#goog-wm { }
+#goog-wm h3.closest-match { }
+#goog-wm h3.closest-match a { }
+#goog-wm h3.other-things { }
+#goog-wm ul li { }
+#goog-wm li.search-goog { display: block; }
+
+div.appComment { padding-bottom: 5px; }
+div.appCommentMaker  { background: #eeeeff;  }
+div.appCommentText{ margin-top: 5px; }
+div.downloadedBeforeComment { font-size: 8pt; font-style: italic }
+div.newAppComment { padding-top: 10px; border: 2px dashed #eeeeff; align: center; text-align: center }
+div.newCommentHead { font-size: 10pt;  align: center; text-align: center }
+
+
+div.headerbar { font-size: 8pt }
+div.headerbar input { font-size: 8pt }
+div.headerOptions { font-size: 12pt; font-weight: bold }
+div.headerOptions a {color: #888888; text-decoration: none}
+
+div.downloadTotal { text-align: center; font-size: 12pt; padding-top: 15px; font-weight: bold }

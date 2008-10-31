@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>AndLicensing.com</title>
+<decorator:head />
+<link href="/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div id="maincontainer">
+	<div id="pageheader"><h1>AndLicensing</h1></div>
+	<div id="content">
+		<div id="maincontent">
+		<h3>Licensing Module</h3>
+		
+		<div align="left">
+		<p>Licenses are simply property sets, they may contain information such as expiry dates or a
+		unique identifier for a user (such as their 'phone number), but it is down to the application to
+		interpret the license and decide what it wants to do with it. These code projects show you how to
+		create a cryptographically secure license key which contains a property set, and then decode 
+		that on an Android device.</p>
+		
+		<p>This code is not about distributing license keys, associating license keys with users, nor
+		is it about how to enforce time limits, it is purely about encoding the information in a secure
+		way which can be decrypted by your app without embedding enough code for a third party to write
+		their own license key generator.</p>
+		
+		<p>This module comes in two parts, the non-Android license generation code, and the Android based 
+		demo which decrypts the property set on an Android device, so hopefully this will give you enough
+		to get going with.</p>
+		</div>
+		
+		<h3>Running through the demo classes available</h3>
+		
+		<p><i>Please Note :</i>The projects come with existing versions of the files you will generate, this is 
+		so you can "dry run" through the procedure if you want to.</p>
+
+		<div align="left">
+		<ol>
+		<li>Download the CLI eclipse project from <a href="AndLicensing-CLI.zip">here</a> and the Android Eclipse project from <a href="AndLicensing-Client.zip">here</a>.
+		<li>In the AndLicensing-CLI project run the com.andlicensing.cli.GenerateKeys class as a Java application (this will create two new files for you; Generator.key and Client.java)</li>
+		<li>Copy the byte array from Client.java into the com.andlicensing.client.Demo class in the AndLicensing-Client project overwriting the existing LICENSE_DECODING_KEY array.</li>
+		<li>Create a properties file containing the properties you want in your license, the format should be lines of key=value pairs (e.g. phone_no=+4412345566).</li>
+		<li>Run the com.andlicensing.cli.GenerateLicense class passing the Generator.key file created by the GenerateKeys class and the License file create in the last step as the programs arguments (this will create two files; License.data and License.java).</li>
+		<li>Copy the byte array from License.java into the com.andlicensing.client.Demo class in the AndLicensing-Client project overwriting the existing LICENSE byte array.</li>
+		<li>Run the AndroidLicensing-Client project on the Android emulator and watch as the properties you entered re-appear.</li>
+		</ol>
+		
+		</div>
+		
+		<h3>Implementation recommendations</h3>
+		
+		<p>If you are going to implement this system we have a few recommendations;</p>
+		
+		<div align="left">
+		<ol>
+		<li>Embed some user or device specific information into the file (the devices 'phone number is a 
+		good example), this will stop users sending one license key around to be used on multiple phones.</li>
+		<li>Run GenerateKeys for each application your going to use this with. Do not re-use the key 
+		in Client.java between multiple applications because this could mean licenses for one application
+		will work with another.</li>
+		<li>If you want license keys from one version not to be valid on the next (say, for a major upgrade),
+		run GenerateKeys and create a new Generator.key & Client.java key-pair.</li>
+		<li>Keep a copy of your key pairs safe. They can not be regenerated, and so if you lose them
+		you will not be able to generate any more licenses</li>
+		</ol>
+		</div>
+		
+		<h3>The details</h3>
+		
+			<div align="left">
+				<p>This system uses 2048 bit RSA encryption to secure the license. GenerateKeys generates a private key
+				(which is put in the Generator.key file), and a public key (which is in the byte array put into the
+				Client.java file). The license generator takes your properties data, encrypts it using the keys generated
+				by GenerateKeys, and puts the encrypted data into a binary-only form in the License.data file and in a byte
+				array form in the License.java file. These two files (License.data and License.java) contain exactly the
+				same information but in two different formats, the do not need depend on each other, the .data file is
+				there to make distribution easy, the .java file is there to make inclusion of the license in a demo 
+				program easy.</p>
+				
+				<p>When you run the demo it uses the private key from Client.java to decode the properties information
+				and reconstruct a java.util.Properties object with that data, this will recreate the properties you
+				had in the original file.</p>
+			</div>
+		
+		<h3>The crypto specifics</h3>
+		
+		<div align="left">
+				<p>Using a public/private key pair means that you do not distribute the information a third party could use to create their own licenses. If an encryption scheme with a single key had been used it would be  possible for a hacker to reverse engineer your program, get the AES key and then start generating licenses by them-self.</p>
+				
+				<p>2048 RSA is currently considered secure. The last known breaking of an RSA key took 11 months and several hundred PCs to crack a 1024 bit key, so it is unlikely that the resources will be available to crack and casually generate licenses for your application</p>
+			</div>
+
+				<h3>Wrap up</h3>
+				
+			<div align="left">
+				<p>Hope this code is useful, and if you have any comments feel free to <a href="http://www.alsutton.com/contact.html">get in touch</a>.</p>
+			</div>
+			
+		
+		</div>
+	 	<div id="sidebar">
+			<div class="advert">
+<script type="text/javascript"><!--
+google_ad_client = "pub-5731005708532982";
+/* AndLicensing */
+google_ad_slot = "4561952418";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>			</div>
+		</div>
+	</div>
+	<div id="pagefooter">
+		<div id="pagefootercontent">
+			Website design and software are (c)Copyright 2008 <a href="http://www.alsutton.com/" target="_blank">Al Sutton</a>, All Rights Reserved.
+		</div>
+	</div>
+</div>
+</body>
+</html>

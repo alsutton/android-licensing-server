@@ -1,0 +1,40 @@
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+	
+<struts>
+	<include file="struts-default.xml"/>
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.enable.SlashesInActionNames" value="true"/>
+    <constant name="struts.freemarker.templatesCache" value="true"/>
+    <constant name="struts.url.includeParams" value="none"/>
+
+	<package name="aas-default" extends="ssl-default" namespace="">
+		<interceptors>
+<!-- 		
+			<interceptor	name="BusinessObjectManagerInterceptor"
+							class="com.andappstore.struts.BusinessObjectManagerInterceptor" />
+			<interceptor	name="AuthenticationCheckInterceptor"
+							class="com.andappstore.struts.AuthenticationInterceptor" />
+			<interceptor	name="RedirectMessageInterceptor"
+							class="com.andappstore.struts.RedirectMessageInterceptor" />
+			<interceptor	name="ExceptionReportingInterceptor"
+							class="com.andappstore.struts.ExceptionReportingInterceptor" />
+ -->							
+			<interceptor-stack name="aas-InterceptorStack">
+				<interceptor-ref name="secure">
+               		<param name="httpPort">80</param>
+               		<param name="httpsPort">443</param>
+				</interceptor-ref>
+<!-- 				<interceptor-ref name="ExceptionReportingInterceptor"/>
+				<interceptor-ref name="BusinessObjectManagerInterceptor"/>
+				<interceptor-ref name="AuthenticationCheckInterceptor"/>
+				<interceptor-ref name="basicStack"/>
+                <interceptor-ref name="RedirectMessageInterceptor"/>				
+ -->
+ 			</interceptor-stack>
+		</interceptors>
+		
+		<default-interceptor-ref name="aas-InterceptorStack"/>
+	</package>		
+ </struts> 
